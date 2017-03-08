@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="test">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="bookmanger"/>
+    <schema id="3" name="business"/>
+    <schema id="4" name="information_schema"/>
+    <schema id="5" name="mysql"/>
+    <schema id="6" name="performance_schema"/>
+    <schema id="7" name="sakila"/>
+    <schema id="8" name="sys"/>
+    <schema id="9" name="user"/>
+    <schema id="10" name="world"/>
+    <table id="11" parent="1" name="test"/>
+    <table id="12" parent="1" name="employees"/>
+    <column id="13" parent="11" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="14" parent="11" name="name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <column id="15" parent="11" name="age">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="16" parent="11" name="isAdmin">
+      <mandatory>1</mandatory>
+      <data-type>bit(1)|0</data-type>
+    </column>
+    <column id="17" parent="11" name="createDate">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="18" parent="11" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="19" parent="12" name="id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="20" parent="12" name="age">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="21" parent="12" name="createDate">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="22" parent="12" name="isAdmin">
+      <data-type>bit(1)|0</data-type>
+    </column>
+    <column id="23" parent="12" name="name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="24" parent="12" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
